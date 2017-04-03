@@ -20,20 +20,9 @@ import PlaygroundSupport
 
 // Create canvas
 let canvas = Canvas(width: 500, height: 500)
-
-// The loops for the circles
-for z in stride(from: 0, through: 100, by: 10) {
-    for x in stride(from: 0, through: 400, by: 100) {
-        for y in stride(from: 0, through: 400, by: 100) {
-            canvas.drawShapesWithBorders = true
-            // The color starting from 120
-            canvas.borderColor = Color(hue: 120 + z, saturation: 100, brightness: 100, alpha: 100)
-            // The Circles
-            canvas.drawEllipse(centreX: z / 2 + x, centreY: z / 2 + y, width: z, height: z)
-            canvas.drawEllipse(centreX: 100 - z / 2 + x, centreY: 100 - z / 2 + y, width: z, height: z)
-            canvas.drawEllipse(centreX: 100 - z / 2 + x, centreY: z / 2 + y, width: z, height: z)
-            canvas.drawEllipse(centreX: z / 2 + x, centreY: 100 - z / 2 + y, width: z, height: z)
-        }
+for x in stride(from: 0, through: 9, by: 1) {
+    for y in stride(from: 0, through: 9, by: 1) {
+        canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 1, height: 1)
     }
 }
 /*:

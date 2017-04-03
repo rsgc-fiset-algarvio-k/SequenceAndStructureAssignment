@@ -27,7 +27,7 @@ canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 2
 
 // Random Generator
-var a = random(from: 0, toButNotIncluding: 361)
+//var a = random(from: 0, toButNotIncluding: 361)
 
 // Loops for the circles
 for z in stride(from: 0, through: 100, by: 10) {
@@ -35,7 +35,7 @@ for z in stride(from: 0, through: 100, by: 10) {
         for y in stride(from: 0, through: 400, by: 100) {
             canvas.drawShapesWithBorders = true
             // The color based on the random generator
-            canvas.borderColor = Color(hue: a + z, saturation: 100, brightness: 100, alpha: 100)
+            canvas.borderColor = Color(hue: 120 + z, saturation: 100, brightness: 100, alpha: 100)
             // The Circles
             canvas.drawEllipse(centreX: z / 2 + x, centreY: z / 2 + y, width: z, height: z)
             canvas.drawEllipse(centreX: 100 - z / 2 + x, centreY: 100 - z / 2 + y, width: z, height: z)
